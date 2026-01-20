@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+
+<body>
+<input type="radio" name="gender" value="male" onchange="changeGender()" checked="true"> Male
+<input type="radio" name="gender" value="Female" onchange="changeGender()"> Female
+    <script>
+        function changeGender(){
+            // เลือก gender ทุก input ออกมา
+            let gendersInput = document.querySelectorAll('input[name="gender"]');
+            // ใคร check อยู่ = เพศที่โดนเลือกอยู่
+            for (let i = 0; i < gendersInput.length; i++){
+                if (gendersInput[i].checked){
+                    console.log("Gender Select : " + gendersInput[i].value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
