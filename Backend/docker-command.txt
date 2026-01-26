@@ -1,0 +1,44 @@
+// Show All containers (default shows just running)
+docker ps --all
+
+// Show just running containers
+docker ps
+
+// pull image from docker hub
+docker run hello-world
+
+// stop containers
+docker stop <containers_id>
+
+// pull an image from registry
+docker pull <image_name>
+
+// create a containers from an image ( สร้าง containers จาก immage คล้ายๆกับ docker run <image_name>)
+docker create <image_name>
+
+// start a containers
+docker start <containers_id>
+
+// remove containers ( ลบcontainer 1by1 )
+docker rm <containers_id>
+
+// remove all containers ( ลบ containers ทั้งหมดที่ pull มาใช้ และ image )
+docker system prune
+
+// nginx server
+docker run nginx 
+
+// sh containers 
+docker run -it <image_name or containers_id> sh
+
+// cat file inside containers
+cat filename.txt
+
+// docker run by nginx
+docker run -p 80:80 (แล้วแต่เลือก port ใช้) nginx
+
+foreground mode
+docker run -p 9000:80 nginx
+
+// detached mode
+docker run -d -p 9100:80 nginx
